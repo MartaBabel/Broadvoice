@@ -1,9 +1,19 @@
 1. What questions do you ask in order to clarify requirements?
-    - 
-    -
-    -
-    -
-    -
+    - Are "First Name" and "Last Name" mandatory fields? What happens if the user does not fill these fields when creating an account?
+    - It is said that all fields accept 6 to 30 characters, but in the database, only 10 characters are accepted for First Name and 12 characters for Last Name. How is it supposed to be? Do we need to change its maximum
+        characters in the user creation window? Or in the database?
+    - What happens when the user presses the "Cancel" button?
+    - What time does the user have to change his password as soon as he receives the email?
+    - It is said that, as soon as the account is created and the user does the login, it will appear on the homepage his First Name, Last Name, and email, but in the mockup, it is only seen the First and Last Name. How is it
+        supposed to be?
+    - What happens if the user tries to create an account by using an invalid email, First Name, or Last Name (in terms of length and allowed characters)?
+    - What happens if the user creates an account successfully? Is it supposed to receive a popup message to inform him about the successful creation of his account as soon as all the information is saved in the database?
+    - Is the website supposed to have some kind of verification of a valid email? For example, if the information filled in the "Email" field contains "@"?
 
 2. Specify 5 test cases to test this requirement:
-    - 
+    - Create an account with a valid email, First Name, and Last Name (in terms of length and allowed characters), and verify if an email is received with a temporary password, as well as if the data put in the creation window
+        is saved in the database in the correct fields of the table. Verify also if the process of creation does not take longer than 3 seconds.
+    - Create an account with an invalid email (like "xxxx@xxxx.xx"), and verify that the website behaves as expected, not creating an account.
+    - Create an account with an invalid email, First Name, or Last Name (in terms of length and allowed characters), and verify that the website behaves as expected.
+    - Create an account without filling in the required fields and verify if the website behaves as expected, not creating an account.
+    - Login into the website and verify what appears on the screen - it must show the user's First Name, Last Name, and email.
